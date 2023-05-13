@@ -1,7 +1,4 @@
-{% if jogo %}
-    <ul>
-        <li>{{ jogo }}</li>
-    </ul>
-{% else %}
-    <p>Que jogo irá comprar?</p>
-{% endif %}
+<h1>{{ jogo.nome }}</h1>
+
+
+<a href="{{ jogo.link_stripe }}">Comprar</a>

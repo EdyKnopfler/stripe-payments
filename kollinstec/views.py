@@ -7,4 +7,7 @@ def home(request):
 
 def comprar_match(request, jogo):
     template = loader.get_template("kollinstec/comprar_match.html")
-    return HttpResponse(template.render({'jogo': jogo}, request))
+    return HttpResponse(
+        template.render(
+            {'jogo': {'nome': 'jogo', 'link_stripe': 'https://buy.stripe.com/test_cN2bLsgUU8PP4PC144'}},
+            request))
