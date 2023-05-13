@@ -9,9 +9,10 @@ ENV PYTHONUNBUFFERED 1
 
 RUN pip install --upgrade pip
 
-COPY . $DockerHOME
-
+COPY requirements.txt $DockerHOME
 RUN pip install -r requirements.txt
+
+COPY . $DockerHOME
 
 EXPOSE 8000
 
