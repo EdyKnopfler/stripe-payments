@@ -4,4 +4,5 @@ from . import views
 
 urlpatterns = [
     path("", views.home, name="home"),
+    path("comprar-match/<str:jogo>", views.comprar_match, name="comprar_match")
 ]
