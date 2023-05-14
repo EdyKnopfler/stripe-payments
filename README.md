@@ -39,8 +39,6 @@ Clique no belíssimo link que de pagamento que o redirecionará para a página d
 
 ```json
 {
-   "description": "jogo
-   "name": "fifa2023
+   "description": "jogo",
+   "name": "fifa2023"
 }
-
-` `
