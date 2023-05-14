@@ -24,6 +24,7 @@ services:
     volumes:
       - .:/app
     environment:
+      DEBUG: true,
       MYSQL_DATABASE: kollinstec_db
       MYSQL_USER: kollinstec
       MYSQL_PASSWORD: kollinstec
