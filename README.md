@@ -35,7 +35,7 @@ Acesse `http://localhost:8000/comprar-match/<qualquer nome ou id>`
 
 Ex.: <http://localhost:8000/comprar-match/fifa2023>
 
-Clique no belíssimo link que de pagamento que o redirecionará para a página de checkout do Stripe. Na volta, o webhook deverá printar no terminal os metadados do jogo:
+Clique no belíssimo link de pagamento que o redirecionará para a página de checkout do Stripe. Na volta, o webhook deverá printar no terminal os metadados do jogo:
 
 ```json
 {
