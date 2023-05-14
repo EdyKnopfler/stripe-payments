@@ -2,7 +2,7 @@
 
 Projeto usando API e CLI do gateway de pagamento Stripe. Simula seleção de produto pela URL e checkout.
 
-Usamos a CLI do Stripe para monitorar os pagamentos e acionar os webhooks localmente.
+Usamos a [CLI do Stripe](https://stripe.com/docs/stripe-cli?locale=pt-BR) para monitorar os pagamentos e acionar os webhooks localmente.
 
 Requer a configuração de uma conta no Stripe no modo de teste. Neste teste suas chaves de acesso devem ser informadas em `kollinstec/views.py`:
 * `stripe.api_key`: use a chave gerada para o modo de testes
