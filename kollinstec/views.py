@@ -19,7 +19,23 @@ def comprar_match(request, jogo):
             request))
 
 def pagar(request, tipo, nome):
-    # No backend foi o que funcionou melhor!
-    # Obteremos o link do database a partir do tipo e nome, ex.: Jogo > Fifa
-    return HttpResponseRedirect(PAYMENT_LINK)
+    session = stripe.checkout.Session.create(
+        success_url="https://example.com/success",
+        line_items=[
+            {
+                "price_data": {
+                    "currency": "brl",
+                    "unit_amount": 1500,  # em 1/100
+                    "product_data": {
+                        # buscamos no BD a partir de tipo e nome
+                        "name": nome,
+                        "description": tipo,
+                    }
+                },
+                "quantity": 1,
+            },
+        ],
+        mode="payment",
+    )
+    return HttpResponseRedirect(session.url)
 

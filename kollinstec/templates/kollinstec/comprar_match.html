@@ -1,22 +1,6 @@
 <h1>{{ jogo.nome }}</h1>
 
-<p>
-    <a href="{{ jogo.link_stripe }}">Comprar via link</a>
-</p>
+<ul>
+    <li><a href="/pagar/jogo/{{ jogo.nome }}">Pagar no backend</a></li>
+</ul>
 
-<script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<form action="/pagar/jogo/{{ jogo.nome }}" method="post">
-    {% csrf_token %}
-    <button>Pagar no backend</button>
-</form>
-
-<p>
-    <stripe-buy-button
-    buy-button-id="buy_btn_1N7S1AGdLPxaw6pogwo22kIh"
-    publishable-key="pk_test_51N492lGdLPxaw6poAnbjb2ss9aDT1AGjbdzZeMgnDSHko5XwYHuiJzmXn4plrzi6OfZ7Nt6ppDhiZN0FUraeZLlz002Ehn1LfX"
-    >
-    </stripe-buy-button>
-</p>
