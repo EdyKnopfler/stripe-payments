@@ -42,3 +42,5 @@ Clique no belíssimo link de pagamento que o redirecionará para a página de ch
    "description": "jogo",
    "name": "fifa2023"
 }
+
+Para outros dados, como do comprador, consulte a API :)
