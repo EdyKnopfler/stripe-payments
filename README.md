@@ -23,6 +23,8 @@ docker compose up -d
 
 ## Monitorar pagamentos e acionar o webhook localmente
 
+Aqui você terá a chave para preencher a variável `webhook_secret`.
+
 ```bash
 stripe listen --forward-to localhost:8000/processar-pagamento
 ```
