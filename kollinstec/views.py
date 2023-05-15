@@ -13,8 +13,6 @@ stripe.api_key = '...'
 # dado pela Stripe CLI
 webhook_secret = '...'
 
-PAYMENT_LINK = 'https://buy.stripe.com/test_cN2bLsgUU8PP4PC144'
-
 
 def home(request):
     return HttpResponse("Aqui irá a home page da Kollins Tec.")
@@ -22,9 +20,7 @@ def home(request):
 def comprar_match(request, jogo):
     template = loader.get_template("kollinstec/comprar_match.html")
     return HttpResponse(
-        template.render(
-            {'jogo': {'nome': jogo, 'link_stripe': PAYMENT_LINK}},
-            request))
+        template.render({'jogo': {'nome': jogo}}, request))
 
 def pagar(request, tipo, nome):
     session = stripe.checkout.Session.create(
